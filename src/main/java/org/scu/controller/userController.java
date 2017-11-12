@@ -29,7 +29,7 @@ public class userController {
         return new ModelAndView("login");
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ModelAndView userLogin(User user){
 
         String userName = user.getUserName();
