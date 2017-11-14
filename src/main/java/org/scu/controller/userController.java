@@ -24,11 +24,6 @@ public class userController {
     @Resource
     private UserService userService;
 
-    @RequestMapping("/index")
-    public ModelAndView tologin(){
-        return new ModelAndView("login");
-    }
-
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ModelAndView userLogin(User user){
 
@@ -41,7 +36,7 @@ public class userController {
                 return new ModelAndView("login","errormessage","密码不能为空");
             }else{
                 if(userService.userLogin(userName,userPwd) != null){
-                    return new ModelAndView("homepage","user",user);
+                    return new ModelAndView("index","user",user);
                 }else{
                     return new ModelAndView("login","errormessage","用户名或密码错误");
                 }
