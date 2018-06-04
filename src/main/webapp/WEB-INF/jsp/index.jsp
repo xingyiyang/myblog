@@ -23,10 +23,7 @@
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="This is my page">
     <link href="<%=basePath %>/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font-Awesome -->
-    <link rel="stylesheet" href="<%=basePath%>/css/font-awesome/css/font-awesome.min.css">
-    <!-- Google Webfonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+
     <link href="<%=basePath %>/css/style.css" rel="stylesheet">
 </head>
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.scu.dao.ProvinceDao">
+    <resultMap id="provinceResult" type="Province">
+        <result column="id" property="provinceId" />
+        <result column="code" property="provinceCode" />
+        <result column="name" property="provinceName" />
+    </resultMap>
+    
+    <select id="getProvinceList" resultMap="provinceResult">
+        SELECT <include refid="columns" /> FROM province
+    </select>
+    
+    <select id="queryProvinceById" resultMap="provinceResult" parameterType="int">
+       SELECT  <include refid="columns" /> FROM province
+       WHERE id = #{pid}
+    </select>
+    
+    <sql id="columns">id,code,name</sql>
+</mapper>

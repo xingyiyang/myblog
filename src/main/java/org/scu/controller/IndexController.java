@@ -36,5 +36,10 @@ public class IndexController {
         return new ModelAndView("single");
     }
 
+    @RequestMapping("/province")
+    public ModelAndView toProvince(){
+        return new ModelAndView("province");
+    }
+
 
 }

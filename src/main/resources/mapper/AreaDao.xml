@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.scu.dao.AreaDao">
+    <resultMap id="areaResult" type="Area">
+        <result column="id" property="areaId" />
+        <result column="code" property="areaCode" />
+        <result column="name" property="areaName" />
+        <result column="citycode" property="citycode" />
+    </resultMap>
+    
+    <select id="getAreaListByCitycode" resultMap="areaResult">
+        SELECT <include refid="columns" /> FROM area
+        WHERE citycode=#{citycode}
+    </select>
+    
+    <sql id="columns">id,code,name,citycode</sql>
+</mapper>
